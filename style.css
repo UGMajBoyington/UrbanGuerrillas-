@@ -1,81 +1,183 @@
-/* Reset + global layout */
+/* GLOBAL RESET & BASE */
+* {
+    box-sizing: border-box;
+}
+
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    color: white;
+    color: #f2f2f2;
+    background-color: #050505;
 }
 
-/* Top Navigation Bar */
+/* URBAN CONCRETE BACKGROUND */
+body {
+    background-image: url("images/ug_concrete_bg.jpg"); /* optional site-wide texture */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* TOP NAVIGATION */
 .topnav {
-    background-color: #111;
-    overflow: hidden;
-    padding: 10px 0;
+    background: rgba(5, 5, 5, 0.95);
+    border-bottom: 2px solid #b30000;
     text-align: center;
+    padding: 8px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .topnav a {
-    color: white;
-    padding: 14px 20px;
+    color: #f2f2f2;
+    padding: 10px 18px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .topnav a:hover {
-    background-color: #444;
+    background-color: #b30000;
 }
 
 .topnav a.active {
-    background-color: #666;
+    background-color: #660000;
 }
 
-/* Centering utility */
-.center {
-    text-align: center;
+/* LAYOUT CONTAINERS */
+.page-wrap {
+    min-height: calc(100vh - 60px);
+    padding: 30px 0 40px 0;
 }
 
-/* Main image styling (used on other pages) */
-.main-image {
-    max-width: 90%;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
-/* Card layout (used on other pages) */
 .container {
-    width: 80%;
-    margin: auto;
-    margin-top: 20px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
+/* CARDS */
 .card {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
+    background: rgba(10, 10, 10, 0.88);
+    border: 1px solid #333;
+    border-left: 4px solid #b30000;
+    padding: 20px 24px;
     margin-bottom: 20px;
-    border-radius: 10px;
+    border-radius: 6px;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.7);
 }
 
-/* Gallery layout (used on other pages) */
-.gallery img {
-    width: 300px;
-    margin: 10px;
-    border-radius: 10px;
+/* HEADINGS */
+h1, h2, h3 {
+    margin-top: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 32px;
+    color: #ff3333;
+}
+
+h2 {
+    font-size: 24px;
+    color: #ff5555;
+}
+
+h3 {
+    font-size: 20px;
+    color: #ff7777;
+}
+
+/* TEXT */
+p {
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+ul {
+    margin: 8px 0 8px 20px;
+}
+
+/* HERO SECTION (HOME) */
+.hero {
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+}
+
+.hero-title {
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #ff3333;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    color: #cccccc;
+    margin-top: 10px;
+}
+
+/* OPTIONAL HERO IMAGE */
+.hero-image {
+    margin-top: 20px;
+    max-width: 100%;
+    border-radius: 8px;
+    border: 2px solid #b30000;
+}
+
+/* ROSTER LISTS */
+.roster-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.roster-section li {
+    margin: 4px 0;
+}
+
+.roster-section strong {
+    color: #ffcccc;
+}
+
+/* ELITE LIST */
+.elite-list ul {
+    list-style-type: none;
+    padding-left: 0;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 20px;
-    color: #ccc;
+    padding: 15px 0 25px 0;
+    font-size: 13px;
+    color: #888;
 }
 
-/* 🔥 SQUAD PAGE BACKGROUND ONLY */
+/* SQUAD PAGE BACKGROUND ONLY */
 .squad-bg {
     background-image: url("images/ug_squad.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+/* Make sure squad page still uses concrete behind nav if image fails */
+.squad-bg .topnav {
+    background: rgba(5, 5, 5, 0.95);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 30px;
+    }
+    .container {
+        width: 94%;
+    }
 }
