@@ -1,129 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urban Guerrillas – History</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+/* ------------------------------
+   GLOBAL RESET & BASE STYLES
+--------------------------------*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #000;
+}
 
-<body>
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
 
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="history.html" class="active">History</a>
-        <a href="roster.html">Roster</a>
-        <a href="squad.html">Squad</a>
-        <a href="elite.html">Elite Dangerous</a>
-    </nav>
+/* ------------------------------
+   NAVIGATION BAR
+--------------------------------*/
+nav {
+    background-color: #000;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 2px solid #333;
+}
 
-    <div class="container">
+nav a {
+    color: #ccc;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
 
-        <!-- UG Motto -->
-        <section class="card">
-            <h1>Urban Guerrillas</h1>
-            <h2><em>“First In, Last Out”</em></h2>
-            <p>The motto that defined every operation, every deployment, and every member who carried the UG tag. 
-            It represents courage, loyalty, and the willingness to lead from the front.</p>
-        </section>
+nav a:hover,
+nav a.active {
+    color: #fff;
+}
 
-        <!-- UG Origin Story -->
-        <section class="card">
-            <h2>Origins (2002)</h2>
-            <p>The Urban Guerrillas were founded in 2002 during the early tactical shooter era. 
-            Built on teamwork, precision, and a no‑nonsense approach to squad operations, UG quickly became known for 
-            discipline, unity, and a signature aggressive tactical style.</p>
-        </section>
+/* ------------------------------
+   CARD STYLE (Used on Index, History, Roster, Elite)
+--------------------------------*/
+.card {
+    background: rgba(0, 0, 0, 0.65);
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    backdrop-filter: blur(4px);
+}
 
-        <!-- Founders Lineage -->
-        <section class="card">
-            <h2>Founders – Identity Lineage</h2>
-            <p>The UG identity has always been preserved across platforms and eras. 
-            The founders carried their names forward into modern games while honoring their original tags.</p>
+/* ------------------------------
+   GALLERY (Used on Elite)
+--------------------------------*/
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
 
-            <ul>
-                <li>
-                    <strong>UG MajBoyington</strong><br>
-                    Originally: <strong>UG Worm Pile</strong><br>
-                    Elite Dangerous: <strong>CMDR UG Col Boyington</strong>
-                </li>
+.gallery img {
+    width: 300px;
+    border-radius: 8px;
+    border: 2px solid #333;
+}
 
-                <li>
-                    <strong>UG Jo Moma</strong><br>
-                    Elite Dangerous: <strong>CMDR UG MOMA</strong>
-                </li>
-            </ul>
+/* ------------------------------
+   ELITE PAGE BACKGROUND
+--------------------------------*/
+.elite-background {
+    background-image: url('images/UG_Elite.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 40px 20px;
+    position: relative;
+}
 
-            <p>This lineage forms the backbone of UG history and preserves the continuity of the clan’s identity.</p>
-        </section>
+/* Dark overlay */
+.elite-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 0;
+}
 
-        <!-- Evolution -->
-        <section class="card">
-            <h2>Evolution of the Clan</h2>
-            <p>Over the years, UG expanded across multiple games and platforms while maintaining its tactical roots. 
-            From early PC shooters to modern space combat simulations, the Urban Guerrillas adapted, evolved, and 
-            continued to operate with the same discipline and unity that defined the founders.</p>
-        </section>
-
-        <!-- Timeline -->
-        <section class="card">
-            <h2>UG Timeline (2002 – Present)</h2>
-
-            <ul class="timeline">
-
-                <li>
-                    <strong>2002 – Founding of the Urban Guerrillas</strong><br>
-                    UG is formed by UG Worm Pile (later UG MajBoyington) and UG Jo Moma. 
-                    The clan establishes its tactical identity and the motto: 
-                    <em>“First In, Last Out.”</em>
-                </li>
-
-                <li>
-                    <strong>2003–2006 – Early Tactical Era</strong><br>
-                    UG becomes known for disciplined squad tactics, coordinated assaults, 
-                    and a reputation for leading from the front.
-                </li>
-
-                <li>
-                    <strong>2007–2012 – Expansion & Core Member Era</strong><br>
-                    The roster grows with long‑standing members including CoRad, Reapr, PUFF, 
-                    Tegu, MILITANTGURU, Major Dank, zorched, and Moko.
-                </li>
-
-                <li>
-                    <strong>2013–2018 – Cross‑Platform Evolution</strong><br>
-                    UG adapts to new games and platforms while maintaining its identity, 
-                    structure, and tactical roots.
-                </li>
-
-                <li>
-                    <strong>2019–2023 – Elite Dangerous Transition</strong><br>
-                    Founders carry their lineage into Elite Dangerous:
-                    <br>• UG MajBoyington → <strong>CMDR UG Col Boyington</strong>
-                    <br>• UG Jo Moma → <strong>CMDR UG MOMA</strong>
-                    <br>• UGPUFF → <strong>CMDR UG PUFF</strong>
-                </li>
-
-                <li>
-                    <strong>2024–Present – Preservation & Legacy Era</strong><br>
-                    The UG website is built to preserve the clan’s history, roster, lineage, 
-                    and identity for future members. The motto remains unchanged:
-                    <strong>First In, Last Out.</strong>
-                </li>
-
-            </ul>
-        </section>
-
-        <!-- Modern Era -->
-        <section class="card">
-            <h2>The Modern Era</h2>
-            <p>Today, UG continues to thrive through its Elite Dangerous wing, website preservation efforts, and 
-            the ongoing commitment to honoring the clan’s legacy. The motto remains unchanged — 
-            <strong>First In, Last Out</strong>.</p>
-        </section>
-
-    </div>
-
-</body>
-</html>
+/* Content above overlay */
+.elite-content {
+    position: relative
