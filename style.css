@@ -61,3 +61,10 @@ ul {
     border: 2px solid #444;
     border-radius: 6px;
 }
+.squad-bg {
+    background-image: url("images/ug_squad.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
