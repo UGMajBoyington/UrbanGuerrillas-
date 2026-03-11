@@ -1,3 +1,4 @@
+
 /* ================================
    UNIVERSAL PAGE BACKGROUND SYSTEM
    ================================ */
@@ -15,8 +16,8 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.18); /* lighter overlay for full visibility */
-    backdrop-filter: brightness(1.25) contrast(1.05); /* boosts image clarity */
+    background: rgba(0, 0, 0, 0.18); /* lighter overlay for visibility */
+    backdrop-filter: brightness(1.25) contrast(1.05);
     z-index: 1;
 }
 
@@ -96,25 +97,19 @@ nav .active {
    PAGE-SPECIFIC BACKGROUNDS
    ================================ */
 
-.home-background {
-    background-image: url('images/home-bg.jpg');
-}
-
-.history-background {
-    background-image: url('images/history-bg.jpg');
+.home-background,
+.history-background,
+.roster-background {
+    background-image: url('images/ug_logo_background.png');
 }
 
 .elite-background {
-    background-image: url('images/elite-bg.jpg');
-    filter: brightness(1.35); /* boosts Elite page visibility further */
+    background-image: url('images/UG_Elite.png');
+    filter: brightness(1.35);
 }
 
 .squad-background {
-    background-image: url('images/squad-bg.jpg');
-}
-
-.roster-background {
-    background-image: url('images/roster-bg.jpg');
+    background-image: url('images/UG_Squad.png');
 }
 
 /* ================================
