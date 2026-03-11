@@ -15,8 +15,8 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.30); /* universal readability overlay */
-    backdrop-filter: brightness(1.10) contrast(1.05);
+    background: rgba(0, 0, 0, 0.18); /* lighter overlay for full visibility */
+    backdrop-filter: brightness(1.25) contrast(1.05); /* boosts image clarity */
     z-index: 1;
 }
 
@@ -78,3 +78,55 @@ nav .active {
 }
 
 /* ================================
+   CARD SYSTEM
+   ================================ */
+
+.card {
+    background: rgba(0, 0, 0, 0.55);
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-left: 3px solid #00aaff;
+    border-right: 3px solid #00aaff;
+    border-radius: 6px;
+    backdrop-filter: blur(3px);
+}
+
+/* ================================
+   PAGE-SPECIFIC BACKGROUNDS
+   ================================ */
+
+.home-background {
+    background-image: url('images/home-bg.jpg');
+}
+
+.history-background {
+    background-image: url('images/history-bg.jpg');
+}
+
+.elite-background {
+    background-image: url('images/elite-bg.jpg');
+    filter: brightness(1.35); /* boosts Elite page visibility further */
+}
+
+.squad-background {
+    background-image: url('images/squad-bg.jpg');
+}
+
+.roster-background {
+    background-image: url('images/roster-bg.jpg');
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #ffffff;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 1);
+    background: rgba(0, 0, 0, 0.65);
+    border-top: 2px solid #00aaff;
+    margin-top: 40px;
+}
