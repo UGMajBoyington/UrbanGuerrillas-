@@ -1,4 +1,14 @@
 /* ================================
+   REQUIRED FIX — ENABLE FULL HEIGHT
+   ================================ */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* ================================
    UNIVERSAL PAGE BACKGROUND SYSTEM
    ================================ */
 
@@ -124,4 +134,3 @@ footer {
     border-top: 2px solid #00aaff;
     margin-top: 40px;
 }
-
