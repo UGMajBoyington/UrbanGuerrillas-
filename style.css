@@ -114,8 +114,10 @@ nav a.active {
 }
 
 /* Hide all content except nav */
-.squad-bg * {
+.squad-bg *:not(nav) {
     display: none;
+}
+
 }
 
 nav {
