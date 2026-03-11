@@ -14,6 +14,9 @@ body {
     /* Make room for fixed nav */
     padding-top: 80px;
 
+    /* Improve text visibility globally */
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.9);
+
     position: relative;
     z-index: 0;
 }
@@ -45,6 +48,10 @@ body::before {
     padding: 20px;
     position: relative;
     z-index: 1;
+
+    /* Optional soft darkening for readability */
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
 }
 
 /* ------------------------------
@@ -54,7 +61,9 @@ nav {
     background-color: #111;
     padding: 15px;
     text-align: center;
-    border-bottom: 2px solid #444;
+
+    /* UG RED ACCENT LINE */
+    border-bottom: 3px solid #b30000;
 
     position: fixed;
     top: 0;
@@ -77,37 +86,15 @@ nav a.active {
 }
 
 /* ------------------------------
-   TOP-LEFT LOGO (Balanced + No Overlap)
---------------------------------*/
-.ug-logo {
-    position: fixed;
-    top: 140px;        /* Moves logo BELOW the crest’s top area */
-    left: 20px;
-    z-index: 10000000; /* Always on top */
-}
-
-.ug-logo img {
-    width: 110px;      /* Smaller, clean, no overlap */
-    height: auto;
-    opacity: 1;
-    border-radius: 10px;
-    transition: 0.2s ease;
-}
-
-.ug-logo img:hover {
-    transform: scale(1.05);
-}
-
-/* ------------------------------
-   CARD STYLE
+   CARD STYLE (Enhanced Visibility)
 --------------------------------*/
 .card {
-    background: rgba(20, 20, 20, 0.75);
-    border: 1px solid #444;
+    background: rgba(0, 0, 0, 0.78); /* Darker for readability */
+    border: 1px solid #b30000;      /* UG red outline */
     border-radius: 8px;
-    padding: 20px;
-    margin: 20px auto;
-    backdrop-filter: blur(4px);
+    padding: 22px;
+    margin: 25px auto;
+    backdrop-filter: blur(6px);     /* Stronger separation */
 
     position: relative;
     z-index: 1;
