@@ -6,13 +6,45 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     color: #fff;
-    background-color: #000;
+
+    /* NEW: Global UG Crest background */
+    background: url('images/ug_logo_background.png') no-repeat center center fixed;
+    background-size: cover;
+
+    /* Make room for fixed nav */
+    padding-top: 80px;
+
+    position: relative;
+    z-index: 0;
+}
+
+/* NEW: Gradient fade overlay */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.75) 0%,
+        rgba(0, 0, 0, 0.45) 40%,
+        rgba(0, 0, 0, 0.25) 70%,
+        rgba(0, 0, 0, 0.10) 100%
+    );
+
+    z-index: 0;
 }
 
 .container {
     max-width: 1000px;
     margin: auto;
     padding: 20px;
+    position: relative;
+    z-index: 1;
 }
 
 /* ------------------------------
@@ -24,12 +56,11 @@ nav {
     text-align: center;
     border-bottom: 2px solid #444;
 
-    /* UNIVERSAL FIXES */
-    position: fixed;      /* Always stays on top */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 999999;      /* Highest possible layer */
+    z-index: 999999;
 }
 
 nav a {
@@ -45,11 +76,6 @@ nav a.active {
     color: #fff;
 }
 
-/* Add space below nav so content doesn't hide under it */
-body {
-    padding-top: 80px;
-}
-
 /* ------------------------------
    CARD STYLE
 --------------------------------*/
@@ -60,6 +86,9 @@ body {
     padding: 20px;
     margin: 20px auto;
     backdrop-filter: blur(4px);
+
+    position: relative;
+    z-index: 1;
 }
 
 /* ------------------------------
@@ -77,10 +106,12 @@ body {
     width: 300px;
     border-radius: 8px;
     border: 2px solid #333;
+    position: relative;
+    z-index: 1;
 }
 
 /* ------------------------------
-   ELITE PAGE BACKGROUND
+   ELITE PAGE BACKGROUND (Override)
 --------------------------------*/
 .elite-background {
     background-image: url('images/UG_Elite.png');
@@ -88,6 +119,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+
     padding: 40px 20px;
     position: relative;
 }
@@ -109,7 +141,7 @@ body {
 }
 
 /* ------------------------------
-   SQUAD PAGE BACKGROUND
+   SQUAD PAGE BACKGROUND (Override)
 --------------------------------*/
 .squad-bg {
     background-image: url('images/UG_Squad.png');
@@ -121,8 +153,6 @@ body {
     min-height: 100vh;
     width: 100%;
     margin: 0;
-
-    /* Make room for fixed nav bar */
     padding-top: 80px;
 
     position: relative;
@@ -155,23 +185,4 @@ footer {
     padding: 20px;
     color: #999;
     font-size: 14px;
-}
-
-/* ------------------------------
-   MOBILE RESPONSIVE
---------------------------------*/
-@media (max-width: 600px) {
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .gallery img {
-        width: 90%;
-    }
-
-    .card {
-        margin: 10px;
-        padding: 15px;
-    }
-}
+    position
