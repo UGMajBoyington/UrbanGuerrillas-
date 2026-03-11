@@ -77,6 +77,29 @@ nav a.active {
 }
 
 /* ------------------------------
+   TOP-LEFT LOGO (Scaled Crest)
+--------------------------------*/
+.ug-logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 999998; /* Just under the nav bar */
+}
+
+.ug-logo img {
+    width: 65px;
+    height: auto;
+    border-radius: 6px;
+    opacity: 0.95;
+    transition: 0.2s ease;
+}
+
+.ug-logo img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* ------------------------------
    CARD STYLE
 --------------------------------*/
 .card {
