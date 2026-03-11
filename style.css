@@ -23,8 +23,10 @@ nav {
     padding: 15px;
     text-align: center;
     border-bottom: 2px solid #444;
-    position: relative;
-    z-index: 1000; /* Always above backgrounds */
+    position: absolute;   /* Always floats above Squad background */
+    top: 0;
+    width: 100%;
+    z-index: 9999;        /* Highest layer */
 }
 
 nav a {
@@ -112,13 +114,18 @@ nav a.active {
     min-height: 100vh;
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding-top: 70px; /* Space for nav bar */
     position: relative;
 }
 
-/* Hide all content EXCEPT the nav bar */
-.squad-bg > *:not(nav) {
+/* Squad page: hide all content EXCEPT the nav bar */
+.squad-bg * {
     display: none;
+}
+
+/* But allow nav bar to show */
+nav {
+    display: block !important;
 }
 
 /* ------------------------------
