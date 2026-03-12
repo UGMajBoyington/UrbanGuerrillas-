@@ -22,18 +22,18 @@ html, body {
     z-index: 0;
 }
 
-/* 🔥 MAX VISIBILITY (ALL PAGES) + SAFARI FIX */
+/* 🚀 EXTREME VISIBILITY + SAFARI SAFE */
 .page-background::before {
     content: "";
     position: absolute;
     inset: 0;
 
-    /* Ultra-light overlay for maximum clarity */
-    background: rgba(0, 0, 0, 0.02);
+    /* Almost no darkening — background fully visible */
+    background: rgba(0, 0, 0, 0.01);
 
-    /* Safari-safe enhanced clarity */
-    -webkit-backdrop-filter: brightness(1.85) contrast(1.18) saturate(1.15);
-    backdrop-filter: brightness(1.85) contrast(1.18) saturate(1.15);
+    /* Stronger clarity boost */
+    -webkit-backdrop-filter: brightness(2.0) contrast(1.22) saturate(1.20);
+    backdrop-filter: brightness(2.0) contrast(1.22) saturate(1.20);
 
     z-index: 1;
 }
@@ -51,18 +51,18 @@ html, body {
 body, p, li {
     color: #ffffff;
     font-family: Arial, sans-serif;
-    text-shadow: 0 0 6px rgba(0, 0, 0, 0.85);
+    text-shadow: 0 0 7px rgba(0, 0, 0, 0.90);
 }
 
 h1, h2, h3 {
     color: #f2f2f2;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.95);
+    text-shadow: 0 0 12px rgba(0, 0, 0, 1);
     margin-bottom: 10px;
 }
 
 a, .accent, .highlight {
     color: #00aaff;
-    text-shadow: 0 0 8px rgba(0, 0, 0, 1);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 1);
     text-decoration: none;
 }
 
@@ -76,7 +76,7 @@ a:hover {
    ================================ */
 
 nav {
-    background: rgba(0, 0, 0, 0.65);
+    background: rgba(0, 0, 0, 0.60);
     padding: 15px;
     text-align: center;
     border-bottom: 2px solid #00aaff;
@@ -86,7 +86,7 @@ nav a {
     color: #ffffff;
     margin: 0 15px;
     font-weight: bold;
-    text-shadow: 0 0 6px rgba(0, 0, 0, 1);
+    text-shadow: 0 0 7px rgba(0, 0, 0, 1);
 }
 
 nav a:hover {
@@ -103,7 +103,7 @@ nav .active {
    ================================ */
 
 .card {
-    background: rgba(0, 0, 0, 0.50);
+    background: rgba(0, 0, 0, 0.45); /* slightly lighter for more background visibility */
     padding: 25px;
     margin: 20px auto;
     max-width: 900px;
@@ -126,7 +126,7 @@ nav .active {
 
 .elite-background {
     background-image: url('images/UG_Elite.png');
-    filter: brightness(1.45);
+    filter: brightness(1.55);
 }
 
 .squad-background {
@@ -142,8 +142,8 @@ footer {
     text-align: center;
     padding: 20px;
     color: #ffffff;
-    text-shadow: 0 0 6px rgba(0, 0, 0, 1);
-    background: rgba(0, 0, 0, 0.65);
+    text-shadow: 0 0 7px rgba(0, 0, 0, 1);
+    background: rgba(0, 0, 0, 0.60);
     border-top: 2px solid #00aaff;
     margin-top: 40px;
 }
