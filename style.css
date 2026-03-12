@@ -13,17 +13,23 @@ html, body {
 
 
 /* ================================
-   HERO BACKGROUND (scrolls with page)
+   HERO BACKGROUND (auto-sizes to full image height)
    ================================ */
 
 .page-background {
     width: 100%;
-    height: 100vh; /* full screen hero */
+
+    /* Your 1024x1024 logo */
     background-size: contain;
-    background-position: center;
+    background-position: top center;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-color: black;
+
+    /* PERFECT FIX: match the real image height */
+    height: auto;
+    aspect-ratio: 1 / 1; /* 1024 × 1024 */
+    
     position: relative;
     z-index: 0;
 }
@@ -58,7 +64,7 @@ nav a:hover {
 
 
 /* ================================
-   CONTENT SECTION (starts directly below hero)
+   CONTENT SECTION (starts EXACTLY at bottom of logo)
    ================================ */
 
 .content-section {
@@ -66,7 +72,9 @@ nav a:hover {
     z-index: 2;
     padding: 40px 20px;
     background: black;
-    margin-top: 0; /* <-- FIXED: content begins exactly at bottom of hero */
+
+    /* No artificial spacing — perfect alignment */
+    margin-top: 0;
 }
 
 
