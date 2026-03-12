@@ -17,10 +17,13 @@ html, body {
     position: relative;
     min-height: 100vh;
 
-    /* Background image fully visible and slightly smaller */
-    background-size: 90%; /* 10% smaller */
+    /* Show the entire background image */
+    background-size: contain;
     background-position: center top;
     background-repeat: no-repeat;
+
+    /* Fill empty space around the image */
+    background-color: black;
 
     z-index: 0;
 }
@@ -31,12 +34,12 @@ html, body {
     position: absolute;
     inset: 0;
 
-    /* No darkening — background fully visible */
+    /* No dark overlay at all */
     background: rgba(0, 0, 0, 0.00);
 
-    /* Strong clarity boost without washing out text */
-    -webkit-backdrop-filter: brightness(2.1) contrast(1.25) saturate(1.25);
-    backdrop-filter: brightness(2.1) contrast(1.25) saturate(1.25);
+    /* Clarity boost without washing out text */
+    -webkit-backdrop-filter: brightness(1.9) contrast(1.22) saturate(1.20);
+    backdrop-filter: brightness(1.9) contrast(1.22) saturate(1.20);
 
     z-index: 1;
 }
@@ -55,13 +58,13 @@ body, p, li {
     color: #ffffff;
     font-family: Arial, sans-serif;
 
-    /* Stronger shadow for readability over clear background */
-    text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    /* Stronger shadow for readability */
+    text-shadow: 0 0 12px rgba(0, 0, 0, 1);
 }
 
 h1, h2, h3 {
     color: #f2f2f2;
-    text-shadow: 0 0 14px rgba(0, 0, 0, 1);
+    text-shadow: 0 0 16px rgba(0, 0, 0, 1);
     margin-bottom: 10px;
 }
 
@@ -91,7 +94,7 @@ nav a {
     color: #ffffff;
     margin: 0 15px;
     font-weight: bold;
-    text-shadow: 0 0 8px rgba(0, 0, 0, 1);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
 nav a:hover {
@@ -108,7 +111,7 @@ nav .active {
    ================================ */
 
 .card {
-    background: rgba(0, 0, 0, 0.28); /* more transparent */
+    background: rgba(0, 0, 0, 0.22); /* more transparent */
     padding: 25px;
     margin: 20px auto;
     max-width: 900px;
@@ -118,7 +121,7 @@ nav .active {
     border-radius: 6px;
 
     /* Stronger blur for readability */
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
 }
 
 
@@ -134,7 +137,6 @@ nav .active {
 
 .elite-background {
     background-image: url('images/UG_Elite.png');
-    filter: brightness(1.55);
 }
 
 .squad-background {
