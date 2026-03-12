@@ -1,6 +1,7 @@
-body {
-    border: 10px solid red !important;
-}
+/* ================================
+   DEBUG BORDER (optional)
+   ================================ */
+/* body { border: 10px solid red !important; } */
 
 
 /* ================================
@@ -12,6 +13,7 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
 
 /* ================================
    UNIVERSAL PAGE BACKGROUND SYSTEM
@@ -25,20 +27,22 @@ html, body {
     background-repeat: no-repeat;
     z-index: 0;
 }
+
+/* 🔥 Improved visibility: lighter overlay + brighter image */
 .page-background::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.10); /* lighter overlay */
-    backdrop-filter: brightness(1.40) contrast(1.08);
+    background: rgba(0, 0, 0, 0.08); /* was 0.18 — now much lighter */
+    backdrop-filter: brightness(1.45) contrast(1.10);
     z-index: 1;
 }
-
 
 .page-background > * {
     position: relative;
     z-index: 2;
 }
+
 
 /* ================================
    UNIVERSAL TEXT SYSTEM
@@ -66,6 +70,7 @@ a:hover {
     color: #66cfff;
 }
 
+
 /* ================================
    NAVIGATION BAR
    ================================ */
@@ -92,6 +97,7 @@ nav .active {
     color: #00aaff;
 }
 
+
 /* ================================
    CARD SYSTEM
    ================================ */
@@ -106,6 +112,7 @@ nav .active {
     border-radius: 6px;
     backdrop-filter: blur(3px);
 }
+
 
 /* ================================
    PAGE-SPECIFIC BACKGROUNDS
@@ -125,6 +132,7 @@ nav .active {
 .squad-background {
     background-image: url('images/UG_Squad.png');
 }
+
 
 /* ================================
    FOOTER
