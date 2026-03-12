@@ -23,7 +23,8 @@ html, body {
     background-size: contain !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
-    background-attachment: fixed !important;
+    background-attachment: scroll !important; /* <-- CHANGED */
+
     background-color: black;
 
     position: relative;
@@ -79,14 +80,15 @@ nav a:hover {
 
 
 /* ================================
-   CONTENT SECTION (BELOW NAV)
+   CONTENT SECTION (BELOW HERO)
    ================================ */
 
 .content-section {
     position: relative;
     z-index: 2;
     padding: 40px 20px;
-    margin-top: 100vh; /* pushes content below hero background */
+
+    margin-top: 100vh; /* <-- CONTENT STARTS BELOW BACKGROUND */
 }
 
 
