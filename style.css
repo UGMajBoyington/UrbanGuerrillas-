@@ -1,11 +1,5 @@
 /* ================================
-   DEBUG BORDER (optional)
-   ================================ */
-/* body { border: 10px solid red !important; } */
-
-
-/* ================================
-   REQUIRED FIX — ENABLE FULL HEIGHT
+   FULL HEIGHT + RESET
    ================================ */
 
 html, body {
@@ -28,13 +22,17 @@ html, body {
     z-index: 0;
 }
 
-/* 🔥 Improved visibility: lighter overlay + brighter image */
+/* 🔥 MAX VISIBILITY VERSION (Option A)
+   - Very light overlay
+   - Strong brightness boost
+   - Slight contrast pop
+*/
 .page-background::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.08); /* was 0.18 — now much lighter */
-    backdrop-filter: brightness(1.45) contrast(1.10);
+    background: rgba(0, 0, 0, 0.05); /* almost no darkening */
+    backdrop-filter: brightness(1.55) contrast(1.12);
     z-index: 1;
 }
 
@@ -51,12 +49,12 @@ html, body {
 body, p, li {
     color: #ffffff;
     font-family: Arial, sans-serif;
-    text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.85);
 }
 
 h1, h2, h3 {
     color: #f2f2f2;
-    text-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.95);
     margin-bottom: 10px;
 }
 
@@ -103,7 +101,7 @@ nav .active {
    ================================ */
 
 .card {
-    background: rgba(0, 0, 0, 0.55);
+    background: rgba(0, 0, 0, 0.50); /* slightly lighter for stronger background visibility */
     padding: 25px;
     margin: 20px auto;
     max-width: 900px;
@@ -126,7 +124,7 @@ nav .active {
 
 .elite-background {
     background-image: url('images/UG_Elite.png');
-    filter: brightness(1.35);
+    filter: brightness(1.45);
 }
 
 .squad-background {
