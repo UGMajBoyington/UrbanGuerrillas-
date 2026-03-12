@@ -22,7 +22,7 @@ html, body {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: scroll; /* background scrolls normally */
+    background-attachment: scroll;
     background-color: black;
     position: relative;
     z-index: 0;
@@ -58,7 +58,7 @@ nav a:hover {
 
 
 /* ================================
-   CONTENT SECTION (scrolls with page)
+   CONTENT SECTION (starts directly below hero)
    ================================ */
 
 .content-section {
@@ -66,9 +66,7 @@ nav a:hover {
     z-index: 2;
     padding: 40px 20px;
     background: black;
-
-    /* NEW: Start content 1 inch below the hero background */
-    margin-top: 1in;
+    margin-top: 0; /* <-- FIXED: content begins exactly at bottom of hero */
 }
 
 
