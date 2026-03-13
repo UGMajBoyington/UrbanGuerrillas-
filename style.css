@@ -119,16 +119,27 @@ p, li {
     background-image: url('images/Ug_logo_background.png');
 }
 
-.campaigns-background {
-    background-image: url('images/Ug_logo_background.png');
-}
-
 .elite-background {
     background-image: url('images/UG_Elite.png');
 }
 
 .squad-background {
     background-image: url('images/UG_Squad.png');
+}
+
+
+/* ================================
+   CAMPAIGNS BACKGROUND (FINAL FIX)
+   ================================ */
+
+.campaigns-background {
+    background-image: url('images/Ug_logo_background.png');
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    height: 700px;      /* tall enough to show the logo */
+    margin-top: 80px;   /* pushes it below the fixed nav bar */
 }
 
 
@@ -143,11 +154,4 @@ footer {
     background: rgba(0,0,0,0.65);
     border-top: 4px solid #8b0000;
     margin-top: 40px;
-}
-
-/* FIX: Campaigns background height + nav bar offset */
-.campaigns-background {
-    background-image: url('images/Ug_logo_background.png');
-    height: 700px;      /* makes background tall enough to be visible */
-    margin-top: 80px;   /* pushes background below the fixed nav bar */
 }
