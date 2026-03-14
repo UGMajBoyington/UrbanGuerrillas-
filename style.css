@@ -13,7 +13,7 @@ html, body {
 
 
 /* ================================
-   HERO BACKGROUND (FIXED)
+   HERO BACKGROUND (FINAL FIX)
    ================================ */
 
 .page-background {
@@ -23,11 +23,13 @@ html, body {
     background-repeat: no-repeat;
     background-color: black;
 
-    /* FIX: force visible height */
     height: 700px;
 
+    /* FIX: push background below nav bar */
+    margin-top: 80px;
+
     position: relative;
-    z-index: 0;
+    z-index: 1;
 }
 
 
@@ -60,12 +62,16 @@ nav a:hover {
 
 
 /* ================================
-   CONTENT SECTION
+   CONTENT SECTION (FINAL FIX)
    ================================ */
 
 .content-section {
     position: relative;
     z-index: 2;
+
+    /* FIX: push content BELOW the background */
+    margin-top: 40px;
+
     padding: 40px 20px;
     background: black;
 }
@@ -118,16 +124,6 @@ p, li {
 
 .squad-background {
     background-image: url('images/UG_Squad.png');
-}
-
-
-/* ================================
-   CAMPAIGNS BACKGROUND (FINAL FIX)
-   ================================ */
-
-.campaigns-background {
-    height: 700px;
-    margin-top: 80px;
 }
 
 
